@@ -22,14 +22,14 @@ public class Mutation {
     private JwtTokenUtil jwtTokenUtil;
 
     private AdminRepository adminRepository;
-    private EnrollmentRepository enrollmentRepository;
+    // private EnrollmentRepository enrollmentRepository;
     private ProfessorRepository professorRepository;
     private SubjectRepository subjectRepository;
     private TodoRepository todoRepository;
     private GradeRepository gradeRepository;
 
-    public Mutation(AdminRepository adminRepository, EnrollmentRepository enrollmentRepository, ProfessorRepository professorRepository, SubjectRepository subjectRepository, TodoRepository todoRepository, GradeRepository gradeRepository) {
-        this.enrollmentRepository = enrollmentRepository;
+    public Mutation(AdminRepository adminRepository, ProfessorRepository professorRepository, SubjectRepository subjectRepository, TodoRepository todoRepository, GradeRepository gradeRepository) {
+        
         this.professorRepository = professorRepository;
         this.gradeRepository = gradeRepository;
         this.subjectRepository = subjectRepository;

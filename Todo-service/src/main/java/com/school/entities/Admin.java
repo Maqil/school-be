@@ -12,8 +12,6 @@ import java.util.Set;
 @ToString
 public class Admin extends User {
 
-    private Integer adminAiid;
-
     @OneToMany(mappedBy = "admin", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Set<Professor> professorSet;
 
@@ -24,13 +22,16 @@ public class Admin extends User {
     private Set<Subject> subjectSet;
 
     @OneToMany(mappedBy = "admin", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<Enrollment> enrollmentSet;
+    private Set<Student> studentSet;
+
+    @OneToMany(mappedBy = "admin", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Set<Parent> parentSet;
 
     public Admin() {
     }
 
-    public Admin(String username, String email, String password, String firstName, String lastName, Boolean enabled) {
-        super(username, email, password, firstName, lastName, enabled, new Role(1L));
+    public Admin(String username, String email, String password, String firstName, String lastName, String phone,Boolean enabled) {
+        super(username, email, password, firstName, lastName, phone, enabled, new Role(1L));
     }
 
     public Admin(String username, String email, String password) {

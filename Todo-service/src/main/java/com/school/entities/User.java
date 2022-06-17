@@ -2,6 +2,8 @@ package com.school.entities;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+import io.leangen.graphql.annotations.GraphQLNonNull;
 import lombok.ToString;
 
 import javax.persistence.*;
@@ -37,12 +39,13 @@ public class User implements Serializable {
 
     }
 
-    public User(String username, String email, String password, String firstName, String lastName, Boolean enabled, Role role) {
+    public User(String username, String email, String password, String firstName, String lastName, String phone, Boolean enabled, Role role) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.phone = phone;
         this.enabled = enabled;
         this.role = role;
     }

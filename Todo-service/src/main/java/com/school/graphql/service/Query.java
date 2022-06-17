@@ -22,7 +22,7 @@ public class Query {
 
     private UserRepository userRepository;
 
-    private EnrollmentRepository enrollmentRepository;
+    // private EnrollmentRepository enrollmentRepository;
     private StudentRepository studentRepository;
     private ProfessorRepository professorRepository;
     private SubjectRepository subjectRepository;
@@ -31,9 +31,9 @@ public class Query {
 
     private RoleRepository roleRepository;
 
-    public Query(UserRepository userRepository, EnrollmentRepository enrollmentRepository, StudentRepository studentRepository, ProfessorRepository professorRepository, SubjectRepository subjectRepository, TodoRepository todoRepository, GradeRepository gradeRepository, RoleRepository roleRepository) {
+    public Query(UserRepository userRepository, StudentRepository studentRepository, ProfessorRepository professorRepository, SubjectRepository subjectRepository, TodoRepository todoRepository, GradeRepository gradeRepository, RoleRepository roleRepository) {
         this.userRepository = userRepository;
-        this.enrollmentRepository = enrollmentRepository;
+        
         this.studentRepository = studentRepository;
         this.professorRepository = professorRepository;
         this.gradeRepository = gradeRepository;
@@ -86,21 +86,21 @@ public class Query {
         return todoRepository.findById(id).get();
     }
 
-    //    Enrollment
-    @GraphQLQuery(name = "fetchAllEnrollments")
-    public List<Enrollment> fetchAllEnrollments() {
-        return enrollmentRepository.findAll();
-    }
+    // //    Enrollment
+    // @GraphQLQuery(name = "fetchAllEnrollments")
+    // public List<Enrollment> fetchAllEnrollments() {
+    //     return enrollmentRepository.findAll();
+    // }
 
-    @GraphQLQuery(name = "fetchEnrollmentById")
-    public Enrollment fetchEnrollmentById(@GraphQLArgument(name = "id") Long id) {
-        return enrollmentRepository.findById(id).get();
-    }
+    // @GraphQLQuery(name = "fetchEnrollmentById")
+    // public Enrollment fetchEnrollmentById(@GraphQLArgument(name = "id") Long id) {
+    //     return enrollmentRepository.findById(id).get();
+    // }
 
-    @GraphQLQuery(name = "fetchEnrollmentByName")
-    public List<Enrollment> fetchEnrollmentByName(@GraphQLArgument(name = "name") String name) {
-        return enrollmentRepository.findByUsernameContains(name);
-    }
+    // @GraphQLQuery(name = "fetchEnrollmentByName")
+    // public List<Enrollment> fetchEnrollmentByName(@GraphQLArgument(name = "name") String name) {
+    //     return enrollmentRepository.findByUsernameContains(name);
+    // }
 
     //    Grade
     @GraphQLQuery(name = "fetchAllGrades")
@@ -140,11 +140,11 @@ public class Query {
         return subjectRepository.findBySubjectNameContains(name);
     }
 
-    @GraphQLQuery(name = "getTodosByStudentId")
-    public List<Subject> getTodosByStudentId(@GraphQLArgument(name = "id") Long id) {
-        Enrollment enrollment = enrollmentRepository.findById(id).get();
-        logger.info("enrollment {}", enrollment);
-        return null;
-        // return subjectRepository.findBySubjectNameContains(name);
-    }
+    // @GraphQLQuery(name = "getTodosByStudentId")
+    // public List<Subject> getTodosByStudentId(@GraphQLArgument(name = "id") Long id) {
+    //     Enrollment enrollment = enrollmentRepository.findById(id).get();
+    //     logger.info("enrollment {}", enrollment);
+    //     return null;
+    //     // return subjectRepository.findBySubjectNameContains(name);
+    // }
 }

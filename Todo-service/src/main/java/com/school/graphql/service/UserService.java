@@ -48,9 +48,10 @@ public class UserService {
                        @GraphQLArgument(name = "password") String password,
                        @GraphQLArgument(name = "firstName") String firstName,
                        @GraphQLArgument(name = "lastName") String lastName,
+                       @GraphQLArgument(name = "phone") String phone,
                        @GraphQLArgument(name = "enabled") Boolean enabled,
                        @GraphQLArgument(name = "role") Role role) {
-        return userRepository.save(new User(username, email, password, firstName, lastName, enabled, role));
+        return userRepository.save(new User(username, email, password, firstName, lastName, phone, enabled, role));
     }
 
 
