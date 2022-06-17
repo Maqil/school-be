@@ -6,6 +6,6 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface ProfessorRepository extends JpaRepository<Professor, String> {
+public interface ProfessorRepository extends JpaRepository<Professor, Long> {
 //    public List<Professor> findByFullNameContains(@Param(value = "mc") String mc);
 }

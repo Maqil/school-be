@@ -21,7 +21,6 @@ public class Query {
     private JwtTokenUtil jwtTokenUtil;
 
     private UserRepository userRepository;
-
     // private EnrollmentRepository enrollmentRepository;
     private StudentRepository studentRepository;
     private ProfessorRepository professorRepository;
@@ -65,7 +64,7 @@ public class Query {
     }
 
     @GraphQLQuery(name = "fetchProfessorById")
-    public Professor fetchProfessorById(@GraphQLArgument(name = "id") Integer id) {
+    public Professor fetchProfessorById(@GraphQLArgument(name = "id") Long id) {
         return professorRepository.findById(id).get();
     }
 
@@ -120,7 +119,7 @@ public class Query {
     }
 
     @GraphQLQuery(name = "fetchStudentGradeById")
-    public Student fetchStudentGradeById(@GraphQLArgument(name = "id") Integer id) {
+    public Student fetchStudentGradeById(@GraphQLArgument(name = "id") Long id) {
         return studentRepository.findById(id).get();
     }
 
