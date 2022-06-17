@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee00243c-8c02-45cd-ab70-c14cd976d9f6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/school/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/school/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/school/entities/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/school/entities/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/school/entities/Enrollment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/school/entities/Enrollment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/school/entities/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/school/entities/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/school/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/school/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/school/graphql/service/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/school/graphql/service/Mutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/school/graphql/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/school/graphql/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/school/security/jwt/JwtUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/school/security/jwt/JwtUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/school/security/jwt/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/school/security/jwt/JwtUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="ee00243c-8c02-45cd-ab70-c14cd976d9f6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +33,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -88,7 +77,18 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.DemoApplication">
+  <component name="RunManager" selected="Spring Boot.TodoServiceApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QueryTest.allRoles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo" />
       <extension name="coverage">
@@ -113,9 +113,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TodoServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.school.TodoServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.QueryTest.allRoles" />
       <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="Spring Boot.TodoServiceApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -194,6 +202,7 @@
       <workItem from="1626188885760" duration="271000" />
       <workItem from="1634989652075" duration="1472000" />
       <workItem from="1635638157538" duration="182000" />
+      <workItem from="1655470733064" duration="1034000" />
     </task>
     <servers />
   </component>
@@ -201,38 +210,50 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1750" height="354" key="GridCell.Tab.0.bottom" timestamp="1635638362383">
+    <state width="1750" height="354" key="GridCell.Tab.0.bottom" timestamp="1655470999504">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="354" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1635638362383" />
-    <state width="1750" height="354" key="GridCell.Tab.0.center" timestamp="1635638362382">
+    <state width="1750" height="354" key="GridCell.Tab.0.bottom/1792.-295.3440.1415/0.0.1792.1120@0.0.1792.1120" timestamp="1655470999504" />
+    <state width="1750" height="354" key="GridCell.Tab.0.center" timestamp="1655470999503">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="354" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1635638362382" />
-    <state width="1750" height="354" key="GridCell.Tab.0.left" timestamp="1635638362381">
+    <state width="1750" height="354" key="GridCell.Tab.0.center/1792.-295.3440.1415/0.0.1792.1120@0.0.1792.1120" timestamp="1655470999503" />
+    <state width="1750" height="354" key="GridCell.Tab.0.left" timestamp="1655470999502">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="354" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1635638362381" />
-    <state width="1750" height="354" key="GridCell.Tab.0.right" timestamp="1635638362382">
+    <state width="1750" height="354" key="GridCell.Tab.0.left/1792.-295.3440.1415/0.0.1792.1120@0.0.1792.1120" timestamp="1655470999502" />
+    <state width="1750" height="354" key="GridCell.Tab.0.right" timestamp="1655470999503">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="354" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1635638362382" />
-    <state width="1750" height="354" key="GridCell.Tab.1.bottom" timestamp="1635638362384">
+    <state width="1750" height="354" key="GridCell.Tab.0.right/1792.-295.3440.1415/0.0.1792.1120@0.0.1792.1120" timestamp="1655470999503" />
+    <state width="1750" height="354" key="GridCell.Tab.1.bottom" timestamp="1655470999506">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="354" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1635638362384" />
-    <state width="1750" height="354" key="GridCell.Tab.1.center" timestamp="1635638362383">
+    <state width="1750" height="354" key="GridCell.Tab.1.bottom/1792.-295.3440.1415/0.0.1792.1120@0.0.1792.1120" timestamp="1655470999506" />
+    <state width="1750" height="354" key="GridCell.Tab.1.center" timestamp="1655470999505">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="354" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1635638362383" />
-    <state width="1750" height="354" key="GridCell.Tab.1.left" timestamp="1635638362383">
+    <state width="1750" height="354" key="GridCell.Tab.1.center/1792.-295.3440.1415/0.0.1792.1120@0.0.1792.1120" timestamp="1655470999505" />
+    <state width="1750" height="354" key="GridCell.Tab.1.left" timestamp="1655470999504">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="354" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1635638362383" />
-    <state width="1750" height="354" key="GridCell.Tab.1.right" timestamp="1635638362384">
+    <state width="1750" height="354" key="GridCell.Tab.1.left/1792.-295.3440.1415/0.0.1792.1120@0.0.1792.1120" timestamp="1655470999504" />
+    <state width="1750" height="354" key="GridCell.Tab.1.right" timestamp="1655470999505">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state width="1750" height="354" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1635638362384" />
+    <state width="1750" height="354" key="GridCell.Tab.1.right/1792.-295.3440.1415/0.0.1792.1120@0.0.1792.1120" timestamp="1655470999505" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/school/TodoServiceApplication.java</url>
+          <line>26</line>
+          <properties field="professorRepository" class="com.school.TodoServiceApplication" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="simpleUML.UMLToolWindowPlugin">
     <General>

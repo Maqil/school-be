@@ -17,7 +17,7 @@ public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long userID;
     private String username;
     private String email;
     //    @JsonIgnore
@@ -57,12 +57,12 @@ public class User implements Serializable {
         this.role = role;
     }
 
-    public Long getId() {
-        return id;
+    public Long getUserID() {
+        return this.userID;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setUserID(Long id) {
+        this.userID = id;
     }
 
     public String getUsername() {

@@ -1,6 +1,7 @@
 package com.school.graphql.service;
 
 
+import com.school.doman.UserDTO;
 import com.school.entities.Role;
 import io.leangen.graphql.annotations.GraphQLArgument;
 import io.leangen.graphql.annotations.GraphQLMutation;
@@ -11,13 +12,19 @@ import com.school.entities.User;
 import com.school.repository.UserRepository;
 import com.school.security.jwt.JwtTokenUtil;
 import org.apache.logging.log4j.core.config.plugins.validation.constraints.Required;
+import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestHeader;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import java.util.Optional;
 
@@ -29,6 +36,9 @@ public class UserService {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
     private UserRepository userRepository;
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -77,5 +87,17 @@ public class UserService {
             logger.info("Invalid Credentials2");
             throw new InvalidCredentialsException("Invalid Credentials!");
         }
+    }
+
+    @GraphQLQuery(name = "getUserProfile", description = "profile")
+    public UserDTO getUserProfile(@RequestHeader("Authorization") String Authorization, @GraphQLArgument(name = "email") String email) throws InvalidCredentialsException {
+
+      logger.info("Authorization {}", Authorization);
+
+      // String authToken = optReq.map(req -> req.getHeader("Authorization")).filter(token -> !token.isEmpty())
+      //     .map(token -> token.replace("Bearer ", "")).orElse(null);
+
+      // logger.info("authToken: {}", authToken);
+      return null;
     }
 }

@@ -2,10 +2,14 @@ package com.school;
 
 import com.school.entities.*;
 import com.school.repository.*;
+
+import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 import java.util.*;
 
@@ -40,6 +44,13 @@ public class TodoServiceApplication implements CommandLineRunner {
         SpringApplication.run(TodoServiceApplication.class, args);
     }
 
+    @Bean
+    public ModelMapper modelMapper() {
+      ModelMapper modelMapper = new ModelMapper();
+      modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+      return modelMapper;
+    }
+
     @Override
     public void run(String... args) throws Exception {
 
@@ -50,7 +61,7 @@ public class TodoServiceApplication implements CommandLineRunner {
         Role r5 = roleRepository.save(new Role(RoleName.ROLE_PARENT));
 
         Admin admin = adminRepository.save(new Admin("admin.admin", "admin@gmail.com", "admin", "admin", "admin", "+212659165635", true));
-        Professor prf1 = professorRepository.save(new Professor("John.Smith",  "John@gmail.com", "John", "john", "smith", "+212569878455", true));
+        Professor prf1 = professorRepository.save(new Professor("john.Smith",  "john@gmail.com", "john", "john", "smith", "+212569878455", true));
         Student std1 = studentRepository.save(new Student("ziyad.maqil",  "ziyad@gmail.com", "ziyad", "ziyad", "ziyad", "+212569845778", true));
         Parent prt1 = parentRepository.save(new Parent("pr1.pr1",  "pr1@gmail.com", "pr1", "pr1", "pr1", "+212569845778", true));
 
